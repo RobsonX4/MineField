@@ -5,7 +5,11 @@
   "description": "Just a minefiel game",
   "license": "ISC",
   "main": "index.html",
+  "scripts": {
+    "start": "http-server -c-1"
+  },
   "dependencies": {
-    "angular": "1.6.4"
+    "angular": "1.6.4",
+    "http-server": "^14.1.0"
   }
 }
