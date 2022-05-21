@@ -1,13 +1,10 @@
 {
   "version": "1.0.0",
   "name": "minefield",
-  "author": "",
-  "description": "",
+  "author": "Robson Costa",
+  "description": "Just a minefiel game",
   "license": "ISC",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "index.html",
   "dependencies": {
     "angular": "1.6.4"
   }

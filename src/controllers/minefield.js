@@ -11,10 +11,10 @@ class Minefield {
 		}
 
 		this.LEVELS = [
-			{ title: 'Easy', lines: 5, collumns: 5, amountBombs: 3 },
-			{ title: 'Normal', lines: 10, collumns: 10, amountBombs: 15 },
-			{ title: 'Hard', lines: 15, collumns: 15, amountBombs: 30 },
-			{ title: 'Custom' },
+			{ title: 'Easy', lines: 8, collumns: 12, amountBombs: 10 },
+			{ title: 'Normal', lines: 12, collumns: 16, amountBombs: 20 },
+			{ title: 'Hard', lines: 16, collumns: 18, amountBombs: 40 },
+			{ title: 'Custom', lines: 12, collumns: 16, amountBombs: 20 },
 		]
 	}
 
@@ -147,6 +147,7 @@ class Minefield {
 	 */
 	setLose () {
 		this.isFinished = true
+		window.alert('You Lose!')
 	}
 
 	/**
@@ -178,10 +179,4 @@ class Minefield {
 	}
 }
 
-new Minefield().setup()
-
-/**
- * Angular config
- */
-const app = angular.module('app', [])
 angular.module('app').controller('minefield', Minefield);

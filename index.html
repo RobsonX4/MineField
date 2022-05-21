@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Minefield 2.0</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="src/assets/style/style.css">
 		<!-- Bootstrap -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	</head>
@@ -52,7 +52,7 @@
 				<div class="mf-matrix">
 					<div class="mf-row" ng-repeat="(x, line) in vm.minefield track by $index">
 						<div class="mf-no-wrap mf-cell mf-{{collumn}}" ng-repeat="(y, collumn) in line track by $index" ng-click="vm.play(x,y)">
-							<img ng-if="vm.isFinished && (collumn == vm.FIELD.BOOM || collumn == vm.FIELD.BOMB)" src="{{collumn}}.png">
+							<img ng-if="vm.isFinished && (collumn == vm.FIELD.BOOM || collumn == vm.FIELD.BOMB)" src="src/assets/img/{{collumn}}.png">
 							<div ng-if="collumn != vm.FIELD.BOOM && collumn != vm.FIELD.AVAILABLE && collumn != vm.FIELD.EMPTY && collumn != vm.FIELD.BOMB">{{ collumn }}</div>
 						</div>
 					</div>
@@ -64,6 +64,7 @@
 		<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
 		<!-- Bootstrap -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-		<script src="index.js"></script>
+		<script src="src/config/app.js"></script>
+		<script src="src/controllers/minefield.js"></script>
 	</body>
 </html>
