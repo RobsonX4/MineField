@@ -1,0 +1,79 @@
+.mf-container {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+}
+.mf-setup {
+	width: 19%;
+	padding: 20px;
+	border: solid;
+	border-radius: 4px;
+	max-height: 400px;
+}
+.mf-minefield {
+	margin-left: 1%;
+	width: 80%;
+	padding: 20px;
+	border: solid;
+	border-radius: 4px;
+}
+
+.mf-matrix {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+}
+  
+.mf-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.mf-cell {
+	width: 100px;
+	border: 1px solid black;
+	flex: 1 0 auto;
+	border-radius: 10px;
+	width: 50px;
+	height: 45px;
+	margin: 1px;
+	font-size: 2em;
+}
+.mf-cell:hover {
+	cursor: pointer;
+}
+
+.mf-no-wrap {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	hyphens: none;
+	overflow: hidden;
+}
+.mf-no-wrap img {
+	width: 30px;
+}
+
+.mf-available {
+	background-color: #CECECE;
+}
+.mf-available:hover {
+	background-color: #989898;
+}
+.mf-bomb {
+	background-color: #CECECE;
+}
+.mf-bomb:hover {
+	background-color: #989898;
+}
+.mf-boom {
+	background-color: #CECECE;
+}
+.mf-boom:hover {
+	background-color: #989898;
+}
+.mf-empty {
+	background-color: white;
+}

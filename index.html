@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Minefield 2.0</title>
+		<link rel="stylesheet" href="style.css">
+		<!-- Bootstrap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	</head>
+	<body class="container" ng-controller="minefield as vm">
+		<h1>Minefield 2.0</h1>
+		
+		<div class="mf-container">
+			<div class="mf-setup">
+				<form>
+					<div class="row">
+						<div class="col-sm-12">
+							<label for="exampleInputPassword1" class="form-label">Level</label>
+							<select class="form-control" ng-model="vm.config" ng-change="vm.setup()">
+								<option ng-value="level" ng-repeat="level in vm.LEVELS track by $index">
+									{{level.title}}
+								</option>
+							</select>
+						</div>
+
+						<div class="col-sm-12">
+							<label for="exampleInputPassword1" class="form-label">Lines</label>
+							<input type="number" class="form-control" ng-model="vm.config.lines">
+						</div>
+						
+						<div class="col-sm-12">
+							<label for="exampleInputEmail1" class="form-label">Collumns</label>
+							<input type="number" class="form-control" ng-model="vm.config.collumns">
+						</div>
+		
+						<div class="col-sm-12">
+							<label for="exampleInputEmail1" class="form-label">Bombs</label>
+							<input type="number" class="form-control" ng-model="vm.config.amountBombs">
+						</div>
+					</div>
+		
+					<br>
+					<div class="row">
+						<button type="submit" class="btn btn-primary" ng-click="vm.setup()">Start</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="mf-minefield">
+				<div class="mf-matrix">
+					<div class="mf-row" ng-repeat="(x, line) in vm.minefield track by $index">
+						<div class="mf-no-wrap mf-cell mf-{{collumn}}" ng-repeat="(y, collumn) in line track by $index" ng-click="vm.play(x,y)">
+							<img ng-if="vm.isFinished && (collumn == vm.FIELD.BOOM || collumn == vm.FIELD.BOMB)" src="{{collumn}}.png">
+							<div ng-if="collumn != vm.FIELD.BOOM && collumn != vm.FIELD.AVAILABLE && collumn != vm.FIELD.EMPTY && collumn != vm.FIELD.BOMB">{{ collumn }}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Angular -->
+		<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+		<!-- Bootstrap -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
