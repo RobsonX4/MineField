@@ -2,7 +2,7 @@
 
 This is a basic minefield game as a challenge between 2 friends to build a fast minefield game.
 
-![Screen shot](https://github.com/RobsonX4/minefield/blob/master/src/assets/img/screen-shot.png)
+![Screen shot](https://github.com/RobsonX4/minefield/blob/master/app/src/assets/img/screen-shot.png)
 
 # Requirements
 
@@ -18,10 +18,6 @@ npm i
 ```
 
 # Running App
-```
-cd app
-```
-
 ```bash
 npm start
 ```
@@ -38,10 +34,6 @@ npm i
 ```
 
 # Running API
-```
-cd app
-```
-
 ```bash
 npm start
 ```
