@@ -39,8 +39,13 @@
 							<label for="exampleInputEmail1" class="form-label">Bombs</label>
 							<input type="number" class="form-control" ng-model="vm.game.config.bombs">
 						</div>
+
+						<div class="col-sm-12" ng-if="vm.game.duration">
+							<label for="exampleInputEmail1" class="form-label">Duração</label>
+							<input type="text" class="form-control" value="{{ (vm.game.duration / 1000).toFixed(1) }} seconds">
+						</div>
 					</div>
-		
+
 					<br>
 					<div class="row">
 						<button type="submit" class="btn btn-primary" ng-click="vm.create()">Start</button>

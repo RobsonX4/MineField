@@ -8,11 +8,15 @@ class Game {
 	}; 
 	minefield: any[]; 
 	status: string 
+	startedAt: number
+	finishedAt: number
+	duration: number
 
 	constructor (config) {
 		this.config = config,
 		this.minefield = [],
 		this.status = 'PLAYING'
+		this.startedAt = Date.now()
 	}
 
 	initMinefield(value) {
@@ -26,6 +30,10 @@ class Game {
 
 	setStatus (status) {
 		this.status = status
+		if (this.status === 'WIN' || this.status === 'LOSE') {
+			this.finishedAt = Date.now()
+			this.duration = this.finishedAt - this.startedAt
+		}
 	}
 
 }
