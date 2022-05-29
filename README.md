@@ -8,15 +8,42 @@ This is a basic minefield game as a challenge between 2 friends to build a fast 
 
 NodeJS v8+
 
-# Install
+# Install App
+```bash
+cd app
+```
 
 ```bash
 npm i
 ```
 
-# Running
+# Running App
 ```
+cd app
+```
+
+```bash
 npm start
 ```
 
 [http://localhost:8080](http://localhost:8080)
+
+# Install API
+```bash
+cd app
+```
+
+```bash
+npm i
+```
+
+# Running API
+```
+cd app
+```
+
+```bash
+npm start
+```
+
+[http://localhost:3000](http://localhost:3000)

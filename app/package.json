@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "minefield",
   "author": "Robson Costa",
-  "description": "Just a minefiel game",
+  "description": "Minefield game",
   "license": "ISC",
   "main": "index.html",
   "scripts": {
@@ -10,6 +10,6 @@
   },
   "dependencies": {
     "angular": "1.6.4",
-    "http-server": "^14.1.0"
+    "http-server": "14.1.0"
   }
 }
